@@ -15,7 +15,7 @@ body {
 }
 
 .remote {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     height: 400px;
     width: 250px;
     display: grid;
