@@ -9,9 +9,10 @@
 
 body {
     font-size: 1.2rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: grid;
     place-items: center;
+    gap: 2rem;
 }
 
 .remote {
@@ -92,6 +93,9 @@ button:hover {
     border-radius: 5px;
     border: 1px solid black;
     text-align: center;
+}
+.selected {
+    background-color: hsla(352, 90%, 67%, 0.808);
 }
 .blank {
     border: none;
