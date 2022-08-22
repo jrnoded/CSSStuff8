@@ -84,6 +84,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(10,1fr);
     gap: 2px;
+    border:2px solid black;
 }
 
 .key {
