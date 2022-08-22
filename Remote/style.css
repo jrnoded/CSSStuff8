@@ -51,6 +51,10 @@ button {
     box-shadow: inset 3px 3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px hsla(0, 0%, 0%, 0.201);
     color: inherit;
 }
+
+button:hover {
+    color: black;
+}
 .ok {
     border-radius: 50%;
 }
@@ -72,4 +76,23 @@ button {
 .right,
 .down {
     border-radius: 6px;
+}
+
+.keyboard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 2px;
+}
+
+.keys {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.blank {
+    border: none;
 }
