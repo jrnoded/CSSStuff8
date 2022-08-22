@@ -97,6 +97,9 @@ button:hover {
 .selected {
     background-color: hsla(352, 90%, 67%, 0.808);
 }
+.next {
+    background-color:hsl(64, 97%, 52%)
+}
 .blank {
     border: none;
 }
