@@ -35,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: translatey(-5%);
-  animation: jump 3s linear infinite;
+  animation: jump 5s linear infinite;
 }
 .other {
   border-radius: 27% 82% 18% 73% / 40% 60% 23% 77%;
