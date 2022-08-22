@@ -1,43 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Passion One", cursive;
 }
 
 body {
     font-size: 1.2rem;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
-
+    /* display: grid;
+    place-items: center; */
 }
 
 .remote {
     background-color: black;
-    height: 600px;
+    height: 500px;
     width: 250px;
     display: grid;
     place-items: center;
     border-radius: 20px;
+    box-shadow: inset 5px 5px 5px white, inset -3px -3px 3px hsl(0, 76%, 3%), 5px 10px 20px hsl(0 76% 3% / 0.5);
     color: white;
-
+}
+h2 {
+    background-color: gray;
+    padding: 6px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 2px black;
 }
 .control {
     background-color: grey;
     width: 200px;
     height: 200px;
-   padding: 10px;
-    
+    padding: 10px;
+    box-shadow: inset 3px 3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px hsla(0, 0%, 0%, 0.201);
     border-radius: 10%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 2px;
 }
-.button {
+button {
+    background-color: hsl(0, 0%, 67%);
     border: none;
     outline: none;
-    
+    font-size: 1.5rem;
+    box-shadow: inset 3px 3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px hsla(0, 0%, 0%, 0.201);
+    color: inherit;
 }
 .ok {
     border-radius: 50%;
@@ -52,4 +63,10 @@ body {
 }
 .down {
     grid-area: 3/2;
+}
+.left,
+.up,
+.right,
+.down {
+    border-radius: 6px;
 }
