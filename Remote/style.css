@@ -51,26 +51,31 @@ button {
     font-size: 1.5rem;
     box-shadow: inset 3px 3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px hsla(0, 0%, 0%, 0.201);
     color: inherit;
+    cursor: pointer;
 }
 
 button:hover {
     color: black;
 }
-.ok {
+.sel,
+.clear {
     border-radius: 50%;
 }
 .up {
     grid-area: 1/2;
-    transform:rotate(90deg)
+    transform: rotate(90deg);
 }
 .left,
-.ok,
+.sel,
 .right {
     grid-area: 2;
 }
 .down {
     grid-area: 3/2;
     transform: rotate(-90deg);
+}
+.clear {
+    grid-area: 3/3;
 }
 .left,
 .up,
@@ -82,9 +87,9 @@ button:hover {
 .keyboard {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 2px;
-    border:2px solid black;
+    border: 2px solid black;
 }
 
 .key {
@@ -99,8 +104,22 @@ button:hover {
     background-color: hsla(352, 90%, 67%, 0.808);
 }
 .next {
-    background-color:hsl(64, 97%, 52%)
+    background-color: hsl(64, 97%, 52%);
 }
 .blank {
     border: none;
+}
+#path {
+    max-width: 500px;
+    display: grid;
+    place-items: center;
+}
+
+#pathtext {
+    width: 25rem;
+    border: 1px solid red;
+    text-align:left;
+    word-wrap: break-all;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
 }

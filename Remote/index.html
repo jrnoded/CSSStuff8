@@ -13,19 +13,21 @@
             <div class="remote">
                 <h2>Remote-O-Matic</h2>
                 <div class="control">
-                    <button class="up">&#9664;</button>
-                    <button class="left">&#9664;</button>
-                    <button class="ok">OK</button>
-                    <button class="right">&#9654;</button>
-                    <button class="down">&#9664;</button>
+                    <button class="up" onclick="clicked('up')">&#9664;</button>
+                    <button class="left" onclick="clicked('left')">&#9664;</button>
+                    <button class="sel" onclick="clicked('select')">SEL</button>
+                    <button class="right" onclick="clicked('right')">&#9654;</button>
+                    <button class="down" onclick="clicked('down')">&#9664;</button>
+                    <button class="clear" onclick="clicked('clear')">CLR</button>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="keyboard">
                 <div class="key selected">q</div>
                 <div class="key next">w</div>
-                <div class="key ">e</div>
+                <div class="key">e</div>
                 <div class="key">r</div>
                 <div class="key">t</div>
                 <div class="key">y</div>
@@ -52,5 +54,11 @@
                 <div class="key">m</div>
             </div>
         </div>
+        <div class="container">
+            <div id="path">
+                <textarea name="" id="pathtext" cols="30" rows="6" readonly="true">left,right</textarea>
+            </div>
+        </div>
+        <script src="app.js"></script>
     </body>
 </html>
