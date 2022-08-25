@@ -43,7 +43,7 @@ h2 {
     grid-template-rows: repeat(3, 1fr);
     gap: 2px;
 }
-button {
+.remote-button {
     background-color: hsl(0, 0%, 67%);
     text-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.636);
     border: none;
@@ -53,6 +53,7 @@ button {
     color: inherit;
     cursor: pointer;
 }
+
 
 button:hover {
     color: black;
@@ -84,10 +85,20 @@ button:hover {
     border-radius: 6px;
 }
 
+#word-form {
+    display: flex;
+    flex-direction: column;
+}
+#word {
+    padding: 10px 5px;
+    font-size: 2rem;
+    text-transform: lowercase;
+    text-align: center;
+}
 .keyboard {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 40px);
     gap: 2px;
     border: 2px solid black;
 }
@@ -100,12 +111,16 @@ button:hover {
     border: 1px solid black;
     text-align: center;
 }
+.enter {
+    width: 80px;
+}
 .selected {
     background-color: hsla(352, 90%, 67%, 0.808);
 }
-.next {
-    background-color: hsl(64, 97%, 52%);
+.picked {
+    background-color:hsla(240, 47%, 41%, 0.236)
 }
+
 .blank {
     border: none;
 }

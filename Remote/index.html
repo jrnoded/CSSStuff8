@@ -13,45 +13,53 @@
             <div class="remote">
                 <h2>Remote-O-Matic</h2>
                 <div class="control">
-                    <button class="up" onclick="clicked('up')">&#9664;</button>
-                    <button class="left" onclick="clicked('left')">&#9664;</button>
-                    <button class="sel" onclick="clicked('select')">SEL</button>
-                    <button class="right" onclick="clicked('right')">&#9654;</button>
-                    <button class="down" onclick="clicked('down')">&#9664;</button>
-                    <button class="clear" onclick="clicked('clear')">CLR</button>
+                    <button class="remote-button up" onclick="clicked('up')">&#9664;</button>
+                    <button class="remote-button left" onclick="clicked('left')">&#9664;</button>
+                    <button class="remote-button sel" onclick="clicked('select')">SEL</button>
+                    <button class="remote-button right" onclick="clicked('right')">&#9654;</button>
+                    <button class="remote-button down" onclick="clicked('down')">&#9664;</button>
+                    <button class="remote-button clear" onclick="clicked('clear')">CLR</button>
                 </div>
             </div>
         </div>
-
+        <div class="form">
+            <form id="word-form" action="">
+                <label for="word">Enter Word</label>
+                <input name "word" id="word" type="text" maxlength="5">
+                <!-- <button class="form-button">Submit</button> -->
+            </form>
+        </div>
         <div class="container">
             <div class="keyboard">
-                <div class="key selected">q</div>
-                <div class="key next">w</div>
-                <div class="key">e</div>
-                <div class="key">r</div>
-                <div class="key">t</div>
-                <div class="key">y</div>
-                <div class="key">u</div>
-                <div class="key">i</div>
-                <div class="key">o</div>
-                <div class="key">p</div>
-                <div class="key next">a</div>
-                <div class="key">s</div>
-                <div class="key">d</div>
-                <div class="key">f</div>
-                <div class="key">g</div>
-                <div class="key">h</div>
-                <div class="key">j</div>
-                <div class="key">k</div>
-                <div class="key">l</div>
+                <div class="key selected" data-chr='q'>q</div>
+                <div class="key" data-chr='w'>w</div>
+                <div class="key" data-chr="e">e</div>
+                <div class="key picked" data-chr="r">r</div>
+                <div class="key" data-chr="t">t</div>
+                <div class="key" data-chr="y">y</div>
+                <div class="key" data-chr="u">u</div>
+                <div class="key" data-chr="i">i</div>
+                <div class="key" data-chr="o">o</div>
+                <div class="key" data-chr="p">p</div>
+                <div class="key picked" data-chr="a">a</div>
+                <div class="key" data-chr="s">s</div>
+                <div class="key" data-chr="d">d</div>
+                <div class="key" data-chr="f">f</div>
+                <div class="key" data-chr="g">g</div>
+                <div class="key" data-chr="h">h</div>
+                <div class="key" data-chr="j">j</div>
+                <div class="key" data-chr="k">k</div>
+                <div class="key" data-chr="l">l</div>
                 <div class="key blank"></div>
-                <div class="key">z</div>
-                <div class="key">x</div>
-                <div class="key">c</div>
-                <div class="key">v</div>
-                <div class="key">b</div>
-                <div class="key">n</div>
-                <div class="key">m</div>
+                <div class="key" data-chr="z">z</div>
+                <div class="key" data-chr="x">x</div>
+                <div class="key picked" data-chr="c">c</div>
+                <div class="key" data-chr="v">v</div>
+                <div class="key" data-chr="b">b</div>
+                <div class="key" data-chr="n">n</div>
+                <div class="key" data-chr="m">m</div>
+                <div class="key enter">Enter</div>
+              
             </div>
         </div>
         <div class="container">
