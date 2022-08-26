@@ -1,49 +1,6 @@
 const path = document.getElementById("pathtext");
 const keyboard = document.getElementsByClassName("key");
 
-function clicked(s) {
-  
-    path.innerHTML = getSelected();
-    switch (s) {
-        case "clear":
-            path.innerHTML = "";
-            break;
-        case "left":
-        case "right":
-        case "up":
-        case "down":
-        case "select":
-            // let p = "";
-            // if (path.innerHTML === "") {
-            //     p = s;
-            // } else {
-            //     p = "," + s;
-            // }
-            // path.innerHTML += p;
-            break;
-    }
-}
-
-function getSelected() {
-    for (const k of keyboard) {
-        if (k.classList.contains("selected")) {
-           console.log(k.dataset.chr)
-            return k.dataset.chr;
-        }
-    }
-    return "what";
-}
-function clearSelected() {
-    for (const k of keyboard) {
-        k.classList.remove("selected");
-        if (k.dataset.chr === "d") {
-            k.classList.add("selected");
-        }
-    }
-}
-
-let ta = new Array();
-
 const keys = {
     q: { x: 0, y: 0 },
     w: { x: 0, y: 1 },
@@ -72,29 +29,110 @@ const keys = {
     m: { x: 2, y: 6 },
 };
 
-let word = "car";
-currentkey = keys["q"];
 
-for (let c of word) {
-    let key = keys[c];
-
-    let vertical = key.x - currentkey.x;
-    let horizontal = key.y - currentkey.y;
-    let vert = "down";
-    let horz = "right";
-    if (vertical < 0) vert = "up";
-    if (horizontal < 0) horz = "left";
-    vertical = Math.abs(vertical);
-    while (vertical > 0) {
-        ta.push(vert);
-        vertical--;
+function clicked(s) {
+    let currentChar = getSelected();
+    const key = keys[currentChar];
+    let x = key.x;
+    let y = key.y;
+    switch (s) {
+        case "clear":
+            path.innerHTML = "";
+            setSelected("q");
+            clearPicked();
+            break;
+        case "up":
+            findKeyboardKey(key.x - 1, key.y);
+            break;
+        case "left":
+            findKeyboardKey(key.x, key.y - 1);
+            break;
+        case "right":
+            findKeyboardKey(key.x, key.y + 1);
+            break;
+        case "down":
+            findKeyboardKey(key.x + 1, key.y);
+            break;
+        case "select":
+            setPicked(currentChar);
+            // let p = "";
+            // if (path.innerHTML === "") {
+            //     p = s;
+            // } else {
+            //     p = "," + s;
+            // }
+            // path.innerHTML += p;
+            break;
     }
-    horizontal = Math.abs(horizontal);
-    while (horizontal > 0) {
-        ta.push(horz);
-        horizontal--;
-    }
-    currentkey = key;
-    ta.push("Select");
 }
-path.innerHTML = word + " " + String(ta.join(", ")).toLowerCase();
+function setSelected(c) {
+    for (const k of keyboard) {
+        k.classList.remove("selected");
+        if (k.dataset.chr === c) {
+            k.classList.add("selected");
+        }
+    }
+}
+function setPicked(c) {
+    for (const k of keyboard) {
+        if (k.dataset.chr == c) {
+            k.classList.add("picked");
+            path.innerHTML += c;
+        }
+    }
+}
+function clearPicked() {
+    for (const k of keyboard) {
+        k.classList.remove("picked");
+    }
+}
+function getSelected() {
+    for (const k of keyboard) {
+        if (k.classList.contains("selected")) {
+            return k.dataset.chr;
+        }
+    }
+    return "q";
+}
+function findKeyboardKey(x, y) {
+    console.log(x, y);
+    for (const k in keys) {
+        pos = keys[k];
+        if (pos) {
+            if (pos.x === x && pos.y === y) {
+                setSelected(k);
+                return;
+            }
+        }
+    }
+    return "";
+}
+
+let ta = new Array();
+
+// let word = "car";
+// currentkey = keys["q"];
+
+// for (let c of word) {
+//     let key = keys[c];
+
+//     let vertical = key.x - currentkey.x;
+//     let horizontal = key.y - currentkey.y;
+//     let vert = "down";
+//     let horz = "right";
+//     if (vertical < 0) vert = "up";
+//     if (horizontal < 0) horz = "left";
+//     vertical = Math.abs(vertical);
+//     while (vertical > 0) {
+//         ta.push(vert);
+//         vertical--;
+//     }
+//     horizontal = Math.abs(horizontal);
+//     while (horizontal > 0) {
+//         ta.push(horz);
+//         horizontal--;
+//     }
+//     currentkey = key;
+//     ta.push("Select");
+// }
+// path.innerHTML = word + " " + String(ta.join(", ")).toLowerCase();
