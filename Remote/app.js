@@ -1,7 +1,7 @@
 const path = document.getElementById("pathtext");
 const keyboard = document.getElementsByClassName("key");
 const inputWord = document.getElementById("inputWord");
-let rules = "Use arrow keys to move to letter of word. Cleck Sel key to select letter. ";
+let rules = "Use arrow keys to move to letter of word. Click Sel key to select letter. ";
 rules += "Click Submit to process word finding effcient path thru all keys. ";
 rules += "Effcient search is up and down first then left and right.";
 rules += "Ok you can cheat and just type in the word. Sorry no backspace implemented!";
