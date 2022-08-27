@@ -129,8 +129,8 @@ button:hover {
     border: 1px solid black;
     text-align: center;
 }
-.enter {
-    width: 80px;
+.empty {
+    border: none;
 }
 .selected {
     background-color: hsla(352, 90%, 67%, 0.808);
