@@ -114,6 +114,7 @@ function submitWord() {
     const word = inputWord.value;
 
     let currentkey = keys["q"];
+  
     let ta = new Array();
     for (let c of word) {
         let key = keys[c];
