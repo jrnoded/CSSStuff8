@@ -43,17 +43,18 @@ h2 {
     grid-template-rows: repeat(3, 1fr);
     gap: 2px;
 }
-.remote-button {
+button {
     background-color: hsl(0, 0%, 67%);
+    color: inherit;
     text-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.636);
     border: none;
     outline: none;
-    font-size: 1.5rem;
     box-shadow: inset 3px 3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px hsla(0, 0%, 0%, 0.201);
-    color: inherit;
+}
+.remote-button {
+    font-size: 1.5rem;
     cursor: pointer;
 }
-
 
 button:hover {
     color: black;
@@ -66,6 +67,7 @@ button:hover {
 .up {
     grid-area: 1/2;
     transform: rotate(90deg);
+    box-shadow: inset 3px -3px 3px white, inset -3px -3px 3px rgba(5, 5, 5, 0.281), 3px 3px 3px rgba(5 , 5, 5,0.201);
 }
 .left,
 .sel,
@@ -75,11 +77,14 @@ button:hover {
 .down {
     grid-area: 3/2;
     transform: rotate(-90deg);
+    box-shadow:  inset -3px 0px 3px white, inset -3px 3px 3px white, inset -0px 0px 3px rgba(5, 5, 5, 0.281),3px -3px 3px rgba(5 , 5, 5,0.201);
 }
 .clear {
-    grid-area: 3/1;
+    grid-area: 3/3;
 }
-.go {grid-area:3/3;}
+.go {
+    grid-area: 3/3;
+}
 .left,
 .up,
 .right,
@@ -90,12 +95,23 @@ button:hover {
 #word-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#word {
+#inputWord {
     padding: 10px 5px;
     font-size: 2rem;
     text-transform: lowercase;
     text-align: center;
+}
+.form-button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 .keyboard {
     width: 100%;
@@ -120,9 +136,11 @@ button:hover {
     background-color: hsla(352, 90%, 67%, 0.808);
 }
 .picked {
-    background-color:hsla(240, 47%, 41%, 0.236)
+    background-color: hsla(240, 47%, 41%, 0.236);
 }
-
+.selected.picked{
+    background-color: hsla(120, 100%, 25%, 0.463);
+}
 .blank {
     border: none;
 }
@@ -135,7 +153,7 @@ button:hover {
 #pathtext {
     width: 25rem;
     border: 1px solid red;
-    text-align:left;
+    text-align: left;
     word-wrap: break-all;
     margin-bottom: 2rem;
     font-size: 1.2rem;
