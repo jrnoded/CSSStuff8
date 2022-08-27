@@ -59,7 +59,8 @@ button:hover {
     color: black;
 }
 .sel,
-.clear {
+.clear,
+.go {
     border-radius: 50%;
 }
 .up {
@@ -76,8 +77,9 @@ button:hover {
     transform: rotate(-90deg);
 }
 .clear {
-    grid-area: 3/3;
+    grid-area: 3/1;
 }
+.go {grid-area:3/3;}
 .left,
 .up,
 .right,

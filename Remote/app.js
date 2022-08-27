@@ -28,7 +28,7 @@ const keys = {
     n: { x: 2, y: 5 },
     m: { x: 2, y: 6 },
 };
-
+ setSelected('q');
 
 function clicked(s) {
     let currentChar = getSelected();
