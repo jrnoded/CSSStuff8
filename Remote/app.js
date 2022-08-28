@@ -112,7 +112,7 @@ function findKeyboardKey(x, y) {
 
 function submitWord() {
     const word = inputWord.value;
-
+    if (word.length == 0 ) return;
     let currentkey = keys["q"];
   
     let ta = new Array();
