@@ -13,10 +13,11 @@ body {
     display: grid;
     place-items: center;
     gap: 2rem;
+    background-color: hsla(0, 1%, 49%, 0.508);
 }
 
 .remote {
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsla(0, 0%, 0%, 0.666);
     height: 400px;
     width: 250px;
     display: grid;
@@ -60,8 +61,7 @@ button:hover {
     color: black;
 }
 .sel,
-.clear,
-.go {
+.clear {
     border-radius: 50%;
 }
 .up {
@@ -82,9 +82,7 @@ button:hover {
 .clear {
     grid-area: 3/3;
 }
-.go {
-    grid-area: 3/3;
-}
+
 .left,
 .up,
 .right,
@@ -100,14 +98,18 @@ button:hover {
 }
 #inputWord {
     padding: 10px 5px;
+    border-radius: 6px;
     font-size: 2rem;
     text-transform: lowercase;
     text-align: center;
+    outline: none;
+    border: none;
 }
 .form-button {
     margin-top: 10px;
     padding: 10px;
     width: 200px;
+    border-radius: 6px;;
     font-size: 1.2rem;
     border: none;
     color: white;
