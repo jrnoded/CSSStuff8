@@ -29,6 +29,9 @@ body {
     box-shadow: inset 5px 5px 5px white, inset -3px -3px 3px hsl(0, 76%, 3%), 5px 10px 20px hsl(0 76% 3% / 0.5);
     color: white;
 }
+h1 {
+    text-shadow: 2px 2px 2px white;
+}
 h2 {
     background-color: gray;
     padding: var(--padding);
