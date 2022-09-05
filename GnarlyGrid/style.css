@@ -5,26 +5,27 @@
 }
 
 html {
-  font: 500 100%/1.4 system-ui;
+    font: 500 100%/1.4 system-ui;
+}
+
+body {
+    background: hsl(55, 76%, 84%);
 }
 .container {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 10px;
+    margin-inline: auto;
     padding: 20px 10px;
 }
-.card {
-  width: 300px;
-  /* float: left; */
-}
-
 img {
-    object-fit: fill;
+    width: 100%;
 }
-@media screen and (max-width:320px){
-    .container {
-    grid-template-columns: 1fr;
-    }
+.card {
+    background-color: hsla(40, 93%, 53%, 0.347);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 4px 4px 8px hsla(0, 0%, 0%, 0.35);
 }
-
