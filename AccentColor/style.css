@@ -1,4 +1,11 @@
+:root {
+    --s: 100px;
+}
+
 body {
+    --_g: rgba(0, 0, 0, 0.052) 90deg, hsl(228, 80%, 30%) 0;
+    background: conic-gradient(from 90deg at 2px 2px, var(--_g)), conic-gradient(from 90deg at 1px 1px, var(--_g));
+    background-size: var(--s) var(--s), calc(var(--s) / 5) calc(var(--s) / 5);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -14,8 +21,8 @@ h2 {
     margin-bottom: 20px;
 }
 h3 {
-  text-align: center;
-  font-weight: 500;
+    text-align: center;
+    font-weight: 500;
 }
 .card {
     width: 300px;
@@ -49,6 +56,6 @@ input.radio {
     accent-color: blue;
 }
 p {
-  text-align: justify;
-  margin-block: 10px
+    text-align: justify;
+    margin-block: 10px;
 }
