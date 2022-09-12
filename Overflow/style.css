@@ -20,9 +20,14 @@ h2 {
     width: 300px;
     box-shadow: 0 0.66rem 2.4rem #0d47a1;
     position: relative;
-    overflow: auto;
 }
-
+.refer {
+  text-align: center;
+  margin-top:-10px;
+}
+.refer a {
+    text-decoration: none;
+}
 .menu {
     position: absolute;
     top: 0.5rem;
@@ -44,7 +49,7 @@ h2 {
     padding: 10px 20px;
     top: 30px;
     width: 100px;
-    right: 0px;
+    right: 300px;
     background-color: #2196f3;
     border-radius: 4px;
     transition: 500ms ease-in-out;
@@ -62,6 +67,7 @@ h2 {
 }
 .menu-list.active {
     opacity: 1;
+    right: 0px;
 }
 .menu-list a {
     text-decoration: none;
