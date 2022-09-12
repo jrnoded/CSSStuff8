@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>No Overflow</title>
+    </head>
+    <body>
+        <div class="area">
+            <h2>I've got 99 problems and horizontal overflow is several of them.</h2>
+
+            <p>
+                They all exclaimed against such terrific ideas; and Mr. Gardiner, after general assurances of his affection for her and all her family, told her
+                that he meant to be in London the very next day, and would assist Mr. Bennet in every endeavour for recovering Lydia.
+            </p>
+
+            <p>
+                Reference:
+                <br />
+                <a href="https://bit.ly/really_long_url_that_links_to_the_wikipedia_page_for_pride_and_prejudice">Pride And Prejudice</a>
+            </p>
+
+            <p>
+                “This is a most unfortunate affair, and will probably be much talked of. But we must stem the tide of malice, and pour into the wounded bosoms
+                of each other the balm of sisterly consolation.”
+            </p>
+
+            <img src="https://assets.codepen.io/3/flourish_1.png" alt="" />
+
+            <nav aria-label="Menu" class="menu">
+                <button id="menubutton" onclick="toggleMenu()">
+                    <svg viewBox="0 0 448 512" width="100" class="menu-icon-svg">
+                        <path
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                        />
+                    </svg>
+                </button>
+                <ul id="menulist" class="menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            const ml = document.getElementById("menulist");
+
+            function toggleMenu() {
+                ml.classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>
