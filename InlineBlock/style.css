@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     display: grid;
     justify-items: center;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
     font-size: 1rem;
 }
 h1 {
@@ -25,13 +25,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--cellwidth), 1fr));
     gap: 1rem;
-    width: 75%
+    width: 75%;
 }
 .card {
     padding: 1rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.5rem;
     box-shadow: 2px 5px 10px hsla(0, 0%, 0%, 0.204);
+    transition: 500ms linear;
+}
+.card:hover {
+    scale: 1.2;
 }
 blockquote {
     padding: 0.5rem;
@@ -43,10 +47,10 @@ cite {
     font-weight: 600;
 }
 code {
-  padding: 5px 0 5px 0;
-  color: blue;
-  background-color: white;
-  font-style: normal;
+    padding: 5px 0 5px 0;
+    color: blue;
+    background-color: white;
+    font-style: normal;
 }
 .border-inline {
     border-inline: 2px solid red;
