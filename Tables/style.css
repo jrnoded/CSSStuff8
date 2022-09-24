@@ -8,9 +8,12 @@
 
 :root {
   --hw: 182px;
+  --radius: 30px;
+  --clr_back: hsl( 158, 65%, 24% );
+  --clr_front: hsl(0, 0%, 100%)
 }
 body {
-  color: white;
+  color: var(--clr_front);
   min-height: 100vh; 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
@@ -20,19 +23,23 @@ body {
   margin-block: 2rem;
 }
 body > * {
-   background-color: #166649;
+   background-color:var(--clr_back);
+   box-shadow: 5px 10px 10px hsl(0 0% 0% / .5);
 }
 header {
   text-align: center;
   font-family: "Abril Fatface", cursive;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 header h1 {
   font-size: 5rem;
+ 
 }
 
 main {
   padding: 2rem;
   display: grid;
+ 
 }
 section {
   display: flex;
@@ -59,7 +66,7 @@ img {
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 600px) {
   section {
     flex-direction: column;
     gap: 0.1rem;
@@ -70,6 +77,9 @@ img {
   header h1 {
     font-size: 2rem;
   }
+  :root {
+    --radius: 15px;
+  }
 }
 footer {
   display: flex;
@@ -78,6 +88,7 @@ footer {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+   border-radius: 0 0 var(--radius) var(--radius);
 }
 footer button {
   display: inline-block;
@@ -91,4 +102,7 @@ footer button {
   line-height: 44px;
   color: #263645;
   cursor: pointer;
+}
+a {
+  color: white;
 }
