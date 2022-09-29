@@ -7,7 +7,9 @@
   grid-auto-flow: dense; 
   /* or 'row', 'row dense', 'column dense' */
 }
-
+.box {
+  text-align: center;;
+}
 #item1 {
   background-color: lime;
   grid-row-start: 2;
