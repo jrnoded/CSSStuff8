@@ -48,6 +48,15 @@ h4 {
 .header h1 {
   text-shadow: 3px 3px 6px white;
 }
+.header .lead {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .lead p {
+  padding-inline: 4rem;
+  color: white;
+}
 article {
   margin: 0.25rem;
   padding-block: 0.3rem;
