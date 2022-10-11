@@ -81,6 +81,10 @@ article {
 .sayings {
   grid-area: sayings;
 }
+.sayings ol  {
+  padding-inline: 1rem;
+  padding-block: .5rem;
+}
 .buystuff {
   grid-area: buystuff;
 }
