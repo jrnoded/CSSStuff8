@@ -20,6 +20,7 @@ main {
   display: grid;
   gap: 0.75rem;
   width: 100%;
+  min-width: 20rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 1fr 1fr;
   grid-template-areas:
@@ -63,7 +64,9 @@ article {
 .casket img {
   width: 300px;
 }
-
+.doctor {
+  grid-area: doctor;
+}
 .vampires {
   grid-area: vampires;
 }
@@ -72,6 +75,19 @@ article {
 }
 .buystuff {
   grid-area: buystuff;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "head"
+                         "doctor"
+                         "sayings"
+                         "buystuff"
+                         "vampires"
+                         "casket";
+  }
 }
 @counter-style vampire-list {
   system: cyclic;
@@ -87,4 +103,12 @@ article {
 
 p {
   padding-bottom: 0.5rem;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+.product p {
+  font-size: .75rem'
 }
