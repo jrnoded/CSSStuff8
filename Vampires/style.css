@@ -12,9 +12,10 @@ body {
   font-size: 16px;
   padding: 2rem;
   background-color: hsla(0, 100%, 25%, 0.268);
+   font-family: "Josefin Slab", serif;
 }
 main {
-  font-family: "Josefin Slab", serif;
+ 
   font-style: 600;
   font-size: 1rem;
   display: grid;
@@ -85,6 +86,10 @@ article {
   padding-inline: 1rem;
   padding-block: .5rem;
 }
+.sayings ol li {
+  padding-bottom: .5rem;
+
+}
 .buystuff {
   grid-area: buystuff;
 }
@@ -123,4 +128,12 @@ p {
 }
 .product p {
   font-size: .75rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+    color: purple;
+  padding: 1rem;
+  font-size: 1.25rem;
 }
