@@ -2,138 +2,141 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
-  width: 100vw;
-  font-size: 16px;
-  padding: 2rem;
-  background-color: hsla(0, 100%, 25%, 0.268);
-   font-family: "Josefin Slab", serif;
+    min-height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    padding: 2rem;
+    background-color: hsla(0, 100%, 25%, 0.268);
+    font-family: "Josefin Slab", serif;
 }
 main {
- 
-  font-style: 600;
-  font-size: 1rem;
-  display: grid;
-  gap: 0.75rem;
-  width: 100%;
-  min-width: 20rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 1fr 1fr;
-  grid-template-areas:
-    "casket head head"
-    "casket doctor sayings"
-    "casket buystuff vampires";
+    font-style: 600;
+    font-size: 1rem;
+    display: grid;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 20rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas:
+        "casket head head"
+        "casket doctor sayings"
+        "casket buystuff vampires";
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Cinzel Decorative", cursive;
-  text-align: center;
-  padding-bottom: .25rem;
+    font-family: "Cinzel Decorative", cursive;
+    text-align: center;
+    padding-bottom: 0.25rem;
 }
 .header {
-  grid-area: head;
-  font-size: 1.1rem;
-  background-color: black;
-  color: red;
-  padding-block-start: 1rem;
-  box-shadow: 5px 5px 10px darkred;
+    grid-area: head;
+    font-size: 1.1rem;
+    background-color: black;
+    color: red;
+    padding-block-start: 1rem;
+    box-shadow: 5px 5px 10px darkred;
+    border-radius: 20px 20px 0 0;
 }
 .header h1 {
-  text-shadow: 3px 3px 6px white;
+    text-shadow: 3px 3px 6px white;
 }
 .header .lead {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .header .lead p {
-  padding-inline: 4rem;
-  color: white;
+    padding-inline: 4rem;
+    color: white;
 }
 article {
-  margin: 0.25rem;
-  padding-block: 0.3rem;
-  padding-inline: 1rem;
-  box-shadow: 5px 5px 10px darkred;
+    margin: 0.25rem;
+    padding-block: 0.3rem;
+    padding-inline: 1rem;
+    box-shadow: 5px 5px 10px darkred;
+    border-radius: 20px 20px 0 0;
 }
 .casket {
-  grid-area: casket;
+    grid-area: casket;
 
-  font-family: "Cinzel Decorative", cursive;
-  text-align: center;
+    font-family: "Cinzel Decorative", cursive;
+    text-align: center;
 }
 .casket img {
-  width: 300px;
+    width: 300px;
 }
 .doctor {
-  grid-area: doctor;
+    grid-area: doctor;
 }
 .vampires {
-  grid-area: vampires;
+    grid-area: vampires;
 }
 .sayings {
-  grid-area: sayings;
+    grid-area: sayings;
 }
-.sayings ol  {
-  padding-inline: 1rem;
-  padding-block: .5rem;
+.sayings ol {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
 }
 .sayings ol li {
-  padding-bottom: .5rem;
-
+    padding-bottom: 0.5rem;
 }
 .buystuff {
-  grid-area: buystuff;
+    grid-area: buystuff;
 }
 
 @media only screen and (max-width: 700px) {
-  main {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "head"
-                         "doctor"
-                         "sayings"
-                         "buystuff"
-                         "vampires"
-                         "casket";
-  }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "head"
+            "doctor"
+            "sayings"
+            "buystuff"
+            "vampires"
+            "casket";
+    }
 }
 @counter-style vampire-list {
-  system: cyclic;
-  symbols: "🦇" "🩸" "🧛🏻‍♂️";
-  suffix: "  ";
+    system: cyclic;
+    symbols: "🦇" "🩸" "🧛🏻‍♂️";
+    suffix: "  ";
 }
 
 .vampires ul {
-  padding: 2rem;
-  list-style-type: vampire-list;
-  font-size: 1rem;
+    padding: 2rem;
+    list-style-type: vampire-list;
+    font-size: 1rem;
 }
 
 p {
-  padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .product {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .product p {
-  font-size: .75rem;
+    font-size: 0.75rem;
 }
-
-footer {
-  display: flex;
-  justify-content: space-between;
+cite {
     color: purple;
-  padding: 1rem;
-  font-size: 1.25rem;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: purple;
+    padding: 1rem;
+    font-size: 1.25rem;
 }
