@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.3rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 400px;
+  height: 400px;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: .1em;
+}
