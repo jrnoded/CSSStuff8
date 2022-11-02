@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-size: 1.3rem;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   /* align-items: center; */
 }
 .card {
   width: 400px;
-  height: 400px;
   display: grid;
   grid-template-columns: 1fr auto;
+  padding-block-start: 2rem;
+  box-shadow: 3px 3px 6px hsla(0, 0% ,0%, 0.5);
+  padding-inline: 1.5rem;
 }
 
 .title {
-    font-weight: 700;
-    letter-spacing: .15em;
-    font-size: 2rem;
-    writing-mode: vertical-lr;
-    padding-inline-start: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 2rem;
+  writing-mode: vertical-lr;
+  padding-inline-start: 5rem;
 }
 a {
   text-decoration: none;
