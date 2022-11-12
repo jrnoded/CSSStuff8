@@ -20,6 +20,20 @@ h3 {
     font-family: 'Orbitron', sans-serif;
 }
 
+em {
+	font-size: 1.25em;
+	font-weight: 700;
+	opacity: 0;
+	animation: blink 2s linear infinite;
+}
+@keyframes blink {
+	25% {
+		opacity: .5;
+	}
+	50% {
+		opacity:1;
+	}
+}
 img {
 	
 	border-radius: 10px;
