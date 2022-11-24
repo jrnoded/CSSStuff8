@@ -84,14 +84,14 @@ h3 {
     padding: 5px;
     border-radius: 15px;
 }
-
+.explain:hover {
+    background: rgb(89, 56, 56);
+    color: #f6f8e0;
+}
 .post p {
     padding: 10px;
 }
-.explain:hover {
-    background: black;
-    color: #f6f8e0;
-}
+
 ul {
     padding: 0 20px;
 }
