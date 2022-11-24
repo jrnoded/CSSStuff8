@@ -88,7 +88,7 @@ h3 {
 .post p {
     padding: 10px;
 }
-.post p:hover {
+.explain:hover {
     background: black;
     color: #f6f8e0;
 }
