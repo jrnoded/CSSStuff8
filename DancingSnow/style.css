@@ -22,7 +22,7 @@ body {
 }
 
 .helper {
-	/* display: none; */
+	display: none;
 }
 
 .snowflake {
