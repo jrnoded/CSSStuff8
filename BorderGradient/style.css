@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background: hsl(0, 0%, 0%);
+}
+.rounded-border-gradient {
+    inline-size: 40vw;
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+    border: solid 2rem transparent;
+    /* background: linear-gradient canvas, canvas padding-box,
+                linear-gradient red blue border-box; */
+    background-image: linear-gradient(black, black), radial-gradient(circle at top left, #f00, #3020ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
