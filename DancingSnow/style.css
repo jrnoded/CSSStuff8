@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+	background-color: #92a2ff;
+    min-height: 100vh;
+	max-width: 100vw;
+	/* overflow: hidden; */
+    
+}
+@keyframes flake {
+	0% {
+		transform: translate3d(calc(var(--x1) * 1vw), 10vh, 0)
+			rotate3d(1, -5, 1, calc(var(--d) * -10deg));
+	}
+	100% {
+		transform: translate3d(calc(var(--x2) * 1vw), 60vh, 0)
+			rotate3d(1, -5, 1, calc(var(--d) * 10deg));
+	}
+}
+
+.helper {
+	display: none;
+}
+
+.snowflake {
+	animation: flake 18s linear infinite;
+	font-size: 4rem;
+}
