@@ -1,0 +1,28 @@
+body {
+	background: linear-gradient(
+		180deg,
+		hsl(228, 100%, 79%) 0%,
+		hsl(224, 96%, 91%) 66%,
+		hsl(228, 93%, 47%) 100%
+	);
+	min-height: 100vh;
+	position: relative;
+}
+
+@keyframes rainfall {
+	0% {
+		transform: translate3d(var(--t), 0, 0);
+	}
+	100% {
+		transform: translate3d(var(--b), 100vh, 0);
+	}
+}
+
+.raindrop {
+	position: absolute;
+
+	animation: rainfall 2.5s linear infinite;
+	animation-delay: var(--d);
+	font-size: 3rem;
+	/* 	left: calc(var(--x)*1px); */
+}
