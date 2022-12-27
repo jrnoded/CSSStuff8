@@ -32,24 +32,31 @@ h1 {
 
 @keyframes sunrise {
 	0% {
-		top: 100vh;
+		top: 89vh;
+		left: -30vw;
 	}
 	20% {
-		top: 70vh;
+		top: 60vh;
+		left: 0vw;
 	}
 	40% {
-		top: 50vh;
+		top: 40vh;
+		left: 20vw;
 	}
 	50% {
-		top: 40vh;
+		top: 30vh;
+		left: 30vw;
 	}
 	60% {
-		top: 45vh;
+		top: 40vh;
+		left: 40vw;
 	}
 	80% {
 		top: 80vh;
+		left: 60vw;
 	}
 	90% {
 		top: 110vh;
+		left: 80vw;
 	}
 }
