@@ -68,7 +68,7 @@ body, html {
     color: var(--dark);
     padding: 1rem;
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     margin: 4px 16px 4px 4px;
     display: none;
     transform: translatey(30px);
