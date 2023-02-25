@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: blue;
+    background-image: url("https://assets.codepen.io/652/90s_dark_pool.png");
+    color: white;
+    display: grid;
+    grid-template-areas:
+        ". head head ."
+        "left main main right"
+        "bbs main main scores"
+        ". footer footer .";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 0.5fr 1fr 200px;
+    font-family: "Comic Neue", cursive;
+}
+header {
+    grid-area: head;
+}
+main {
+    grid-area: main;
+
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+.construction {
+    opacity: 0;
+    animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+h1,
+h3,
+h4 {
+    text-align: center;
+}
+h1 {
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid yellow;
+    background-color: red;
+}
+
+h2 {
+    display: inline-block;
+    text-align: left;
+}
+.left {
+    grid-area: left;
+}
+.right {
+    grid-area: right;
+}
+.left,
+.right {
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    background: black;
+    margin-inline: 15px;
+}
+h3 {
+    padding-top: 60px;
+    cursor: pointer;
+}
+footer {
+    grid-area: footer;
+}
+.scores {
+    grid-area: scores;
+    text-align: right;
+    margin-right: 10px;
+}
+.bbs {
+    grid-area: bbs;
+}
+
+.center {
+    text-align: center;
+}

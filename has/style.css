@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruthie&display=swap");
+
+:root {
+  --base_clr: 177, 70%, 41%;
+  --nocap_clr: 180 0% 60%;
+  --cap_clr: 120, 100%, 35%;
+  --front_clr: 0, 0%, 100%;
+
+}
+
+body {
+  background-color: hsl(var(--base_clr));
+  font-family: "Ruthie", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 3px 3px 5px hsl(var(--front_clr));
+}
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.gallery img {
+  width: 100%;
+  box-shadow: 5px 5px 10px hsl(0 0% 0% / 0.75);
+  /* border: 2px solid hsl(var(--cap_clr)); */
+}
+figure {
+  background-color: hsl(var(--nocap_clr));
+  padding: 1rem;
+  box-shadow: inset 5px 5px 5px hsl(0 0% 0% / 0.75);
+}
+figure:has(figcaption) {
+  /* font-family: serif; */
+  background-color: hsl(var(--cap_clr));
+  /* border: 2px solid hsl(var(--cap_clr)); */
+  color: hsl(var(--front_clr));
+
+  border: none;
+}
+
+figcaption {
+  padding: 0.2em;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@supports selector(:has(figcaption)) {
+  :root {
+    --base_clr: 55, 33%, 79%;
+  }
+}
